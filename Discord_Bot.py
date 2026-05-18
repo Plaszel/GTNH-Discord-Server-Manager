@@ -10,6 +10,7 @@ path_to_bot = "" #type in path to folder with minecraft server
 allowed_users = [] #discord user id  example [123456789876543210,123456789876543210,123456789876543210]
 allowed_groups = [] #discord role id  example [123456789876543210,123456789876543210,123456789876543210]
 files_to_load = ["playerdata","PERSONAL_DIM_180","backpacks"] #names of files to load
+token = "" #put in your bot token
 
 open(f"{path_to_bot}/Discord_logs.txt", "a").close()
 open(f"{path_to_bot}/Discord_logs.txt", "w").close()
@@ -192,4 +193,4 @@ async def stop(ctx):
 async def help(ctx):
     await ctx.send("**List of commands:**\n- **!start** - start the server\n- **!stop** - stops the server\n- **!backups** - show list of available backups\n- **!load (index of backup)** - loads chosen backup (additionally \"ALL\" can be added for loading whole world file\n- **!help** - for list of commands")
 
-bot.run("Discord bot token") #put in your bot token
+bot.run(token)
